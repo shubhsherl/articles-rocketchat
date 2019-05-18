@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "article",
+    "description": "Model for Article"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "content": {
+      "required": true,
+      "type": "text"
+    },
+    "views": {
+      "type": "biginteger",
+      "required": true,
+      "default": "0"
+    },
+    "created_at": {
+      "required": true,
+      "type": "date"
+    },
+    "modified_at": {
+      "required": true,
+      "type": "date"
+    },
+    "state": {
+      "required": true,
+      "enum": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "default": "draft",
+      "type": "enumeration"
+    },
+    "tags": {
+      "type": "string"
+    }
+  }
+}
