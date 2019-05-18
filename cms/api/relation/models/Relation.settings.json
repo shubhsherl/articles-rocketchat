@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "relation",
+  "info": {
+    "name": "relation",
+    "description": "Relation between user and article"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "article": {
+      "model": "article",
+      "via": "relations"
+    },
+    "role": {
+      "required": true,
+      "enum": [
+        "owner",
+        "editor",
+        "author",
+        "",
+        ""
+      ],
+      "default": "owner",
+      "type": "enumeration"
+    },
+    "user": {
+      "model": "user",
+      "via": "relations",
+      "plugin": "users-permissions"
+    }
+  }
+}

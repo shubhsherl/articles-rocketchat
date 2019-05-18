@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "article",
   "info": {
     "name": "article",
     "description": "Model for Article"
@@ -22,14 +22,6 @@
       "required": true,
       "default": "0"
     },
-    "created_at": {
-      "required": true,
-      "type": "date"
-    },
-    "modified_at": {
-      "required": true,
-      "type": "date"
-    },
     "state": {
       "required": true,
       "enum": [
@@ -42,6 +34,10 @@
     },
     "tags": {
       "type": "string"
+    },
+    "relations": {
+      "collection": "relation",
+      "via": "article"
     }
   }
 }

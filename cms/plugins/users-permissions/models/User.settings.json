@@ -48,6 +48,16 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "rc_id": {
+      "default": "rocketchat_id",
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "relations": {
+      "collection": "relation",
+      "via": "user"
     }
   },
   "collectionName": "users-permissions_user"
