@@ -21,8 +21,6 @@ import validateInput from 'utils/inputsValidations';
 
 import Block from '../../components/HomePageBlock';
 import Sub from '../../components/Sub';
-import SupportUsCta from '../../components/SupportUsCta';
-import SupportUsTitle from '../../components/SupportUsTitle';
 
 import { selectPlugins } from '../App/selectors';
 
@@ -55,7 +53,7 @@ const FIRST_BLOCK = [
     content: () => <CreateContent />,
   },
 ];
-
+// TODO: Replace with some RC articeles link.
 const FIRST_BLOCK_LINKS = [
   {
     link: 'https://strapi.io/documentation/',
@@ -89,27 +87,19 @@ const SECOND_BLOCK = {
 const SOCIAL_LINKS = [
   {
     name: 'GitHub',
-    link: 'https://github.com/strapi/strapi/',
+    link: 'https://github.com/RocketChat/Rocket.Chat',
   },
   {
-    name: 'Slack',
-    link: 'https://slack.strapi.io/',
+    name: 'Facebook',
+    link: 'https://www.facebook.com/RocketChatApp',
   },
   {
-    name: 'Medium',
-    link: 'https://medium.com/@strapi',
+    name: 'Linkedin',
+    link: 'https://www.linkedin.com/company/rocket-chat/',
   },
   {
     name: 'Twitter',
-    link: 'https://twitter.com/strapijs',
-  },
-  {
-    name: 'Reddit',
-    link: 'https://www.reddit.com/r/node/search?q=strapi',
-  },
-  {
-    name: 'Stack Overflow',
-    link: 'https://stackoverflow.com/questions/tagged/strapi',
+    link: 'https://twitter.com/RocketChat',
   },
 ];
 
@@ -183,7 +173,7 @@ export class HomePage extends React.PureComponent {
 
     return (
       <div className={cn('container-fluid', styles.containerFluid)}>
-        <Helmet title="Home Page" />
+        <Helmet title="Rocket.chat Articles Admin" />
         <div className="row">
           <div className="col-md-8 col-lg-8">
             <Block>
@@ -224,38 +214,6 @@ export class HomePage extends React.PureComponent {
                     <SocialLink key={key} {...value} />
                   ))}
                 </div>
-                <div className={styles.newsLetterWrapper}>
-                  <div>
-                    <FormattedMessage id="app.components.HomePage.newsLetter" />
-                  </div>
-                  <form onSubmit={this.handleSubmit}>
-                    <div className={cn(styles.homePageForm, 'row')}>
-                      <div className="col-md-12">
-                        <Input
-                          value={body.email}
-                          onChange={this.props.onChange}
-                          name=""
-                          placeholder="johndoe@gmail.com"
-                          error={!isEmpty(this.state.errors)}
-                        />
-                        <FormattedMessage id="app.components.HomePage.cta">
-                          {message => <button type="submit">{message}</button>}
-                        </FormattedMessage>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </Block>
-          </div>
-          <div className="col-lg-4 col-md-4">
-            <Block className={styles.blockShirt}>
-              <div>
-                <SupportUsTitle />
-                <FormattedMessage id="app.components.HomePage.support.content">
-                  {message => <p>{message}</p>}
-                </FormattedMessage>
-                <SupportUsCta />
               </div>
             </Block>
           </div>

@@ -55,7 +55,6 @@ import HomePage from '../HomePage/Loadable';
 import Marketplace from '../Marketplace/Loadable';
 import LeftMenu from '../LeftMenu';
 import ListPluginsPage from '../ListPluginsPage/Loadable';
-import Onboarding from '../Onboarding';
 import NotFoundPage from '../NotFoundPage/Loadable';
 import PluginPage from '../PluginPage';
 
@@ -69,6 +68,8 @@ const PLUGINS_TO_BLOCK_PRODUCTION = [
   'content-type-builder',
   'settings-manager',
 ];
+
+const RC_API_URL = "https://www.localhost:3000/"
 
 export class AdminPage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -289,7 +290,7 @@ export class AdminPage extends React.Component {
           isOpen={this.props.blockApp && this.props.showGlobalAppBlocker}
           {...this.props.overlayBlockerData}
         />
-        {this.shouldDisplayLogout() && <Onboarding />}
+        {this.shouldDisplayLogout()}
       </div>
     );
   }

@@ -26,7 +26,7 @@ function LeftMenuFooter({ version }) { // eslint-disable-line react/prefer-state
         <LeftMenuLink
           icon="question-circle"
           label={messages.help.id}
-          destination="https://strapi.io/help"
+          destination="https://open.rocket.chat/"
         />
       </ul>
       <div className={styles.poweredBy}>

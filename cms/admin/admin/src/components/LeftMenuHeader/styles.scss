@@ -4,7 +4,7 @@
 .leftMenuHeader { /* stylelint-ignore */
   background: $left-menu-link-hover;
   height: $header-height;
-  background: linear-gradient(100deg , #1C5DE7, #1C91E7);
+  background: linear-gradient(100deg , #2f343d, #2f343d);
 }
 
 .projectName {
@@ -18,7 +18,7 @@
   letter-spacing: 0.2rem;
   color: $white;
 
-  background-image: url('../../assets/images/logo-strapi.png');
+  background-image: url('../../assets/images/logo-rocketchat.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto 3rem;

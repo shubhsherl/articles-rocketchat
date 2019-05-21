@@ -20,15 +20,15 @@ function WelcomeContent({ hasContent }) {
           {message => (
             <p className={styles.welcomeContentP}>
               {message}
-              <a className={styles.welcomeContentA} href="https://slack.strapi.io/" target="_blank">
-                Slack
+              <a className={styles.welcomeContentA} href="https://open.rocket.chat/" target="_blank">
+                Rocket.Chat Community
               </a>
               <FormattedMessage id="app.components.HomePage.welcomeBlock.content.raise" />
               <FormattedMessage id="app.components.HomePage.welcomeBlock.content.issues">
                 {message => (
                   <a
                     className={styles.welcomeContentA}
-                    href="https://github.com/strapi/strapi/issues/new/choose"
+                    href="https://github.com/Rocketchat/Rocket.chat/issues/new/choose"
                     target="_blank"
                   >
                     {message}

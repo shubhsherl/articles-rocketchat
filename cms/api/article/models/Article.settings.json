@@ -38,6 +38,11 @@
     "relations": {
       "collection": "relation",
       "via": "article"
+    },
+    "cover_image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }
